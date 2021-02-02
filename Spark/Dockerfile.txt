@@ -2,9 +2,9 @@ FROM mcr.microsoft.com/mmlspark/release
 
 LABEL name="Container image with MML Spark and Jupyter"
 
-WORKDIR /TextAnalysis
+WORKDIR /MySpark
 
-COPY ./online_retail.csv .
+COPY ./Data .
 
 RUN pip3 install -U pip
 RUN pip3 install -U jupyter
