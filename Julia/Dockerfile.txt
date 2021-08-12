@@ -7,8 +7,9 @@ LABEL name="Container image with Jupyter Notebook and Julia"
 # set the working directory in the container
 WORKDIR /MyJulia
 
-# copy the local directory containing the dependencies file and the jupyter configuration file
-COPY ./MyJulia .
+# copy the dependencies file and the jupyter configuration file
+COPY requirements.txt .
+COPY ConfigureJupyter.jl .
 
 # install dependencies and configure jupyter
 RUN apt-get update && apt-get install -y \
