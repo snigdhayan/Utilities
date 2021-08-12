@@ -7,6 +7,9 @@ LABEL name="Container image with Jupyter Notebook and Julia"
 # set the working directory in the container
 WORKDIR /MyJulia
 
+# copy the contents of a local directory
+COPY ./MyJulia .
+
 # copy the dependencies file and the jupyter configuration file
 COPY requirements.txt .
 COPY ConfigureJupyter.jl .
