@@ -4,6 +4,7 @@ LABEL name="Container image with MML Spark and Jupyter"
 
 WORKDIR /MySpark
 
+COPY requirements.txt .
 COPY ./MySpark .
 
 RUN apt-get update && apt-get install -y \
